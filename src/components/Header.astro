@@ -5,6 +5,19 @@ const url = new URL(Astro.request.url);
 ---
 
 <script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+<script type="text/javascript">
+  algoliasearchNetlify({
+	appId: 'FZX2E443ZZ',
+	apiKey: 'f76c48d647c29a3d27fb82ac5e384bc4',
+	siteId: '0c2541ee-adc4-4d72-badc-0a12f4048999',
+	branch: 'main',
+	selector: 'div#search',
+  });
+</script>
+<div id="search"></div>
+
 	import { toggleClass } from "@/util";
 
 	document.addEventListener("DOMContentLoaded", () => {
