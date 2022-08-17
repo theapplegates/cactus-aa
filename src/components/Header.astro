@@ -14,7 +14,6 @@ const url = new URL(Astro.request.url);
 	selector: 'div#search',
   });
 </script>
-<div id="search"></div>
 
 <script>
 
@@ -57,6 +56,7 @@ const url = new URL(Astro.request.url);
 			</svg>
 			<span>Astro Cactus</span>
 		</a>
+		<div id="search"></div>
 		<nav id="navigation-menu" aria-label="Main">
 			<a href="/" aria-current={url.pathname === "/" ? "page" : false}>Home</a>
 			<a href="/about" aria-current={url.pathname === "/about" ? "page" : false}
